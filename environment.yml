@@ -1,5 +1,6 @@
 name: ifes-classes
 channels:
+  - QuantStack
   - conda-forge
 dependencies:
   - octave_kernel
