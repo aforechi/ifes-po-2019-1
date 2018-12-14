@@ -1,0 +1,7 @@
+name: ifes-classes
+channels:
+  - conda-forge
+dependencies:
+  - octave_kernel
+  - xeus-cling
+  - notebook
