@@ -8,3 +8,8 @@ autoconf
 libtool 
 zlib1g-dev 
 lsb-release
+swig
+python3-dev 
+python3-wheel 
+python3-setuptools 
+python3-six

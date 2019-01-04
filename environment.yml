@@ -6,3 +6,5 @@ dependencies:
   - octave_kernel
   - xeus-cling
   - notebook
+  - pip:
+  	- ortools

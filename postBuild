@@ -2,19 +2,21 @@
 
 work="$PWD"
 
-wget "https://github.com/google/or-tools/archive/v6.10.tar.gz"
+#wget "https://github.com/google/or-tools/archive/v6.10.tar.gz"
+#tar zxf v6.10.tar.gz
+#cd or-tools-6.10
 
-tar zxf v6.10.tar.gz
+#make third_party
 
-cd or-tools-6.10
+#make cc
+#make test_cc
+#make install_cc
 
-make cc
+#make python
+#make test_python
+#make install_python
 
-make test_cc
-
-make install_cc
-
-cd $work
-
-rm -rf or-tools-6.10
-rm v6.10.tar.gz
+wget "https://github.com/google/or-tools/releases/download/v6.10/or-tools_ubuntu-18.04_v6.10.6025.tar.gz"
+tar zxf or-tools_ubuntu-18.04_v6.10.6025.tar.gz
+mv or-tools_Ubuntu-18.04-64bit_v6.10.6025 ortools
+rm or-tools_ubuntu-18.04_v6.10.6025.tar.gz
