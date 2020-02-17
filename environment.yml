@@ -1,4 +1,4 @@
-name: ifes-classes
+name: ifes-po
 channels:
   - QuantStack
   - conda-forge
