@@ -2,6 +2,7 @@
 #define __SETUP_ORTOOLS_H__
 
 #define USE_GLOP
+#define USE_CBC
 
 #pragma cling add_include_path("ortools/include")
 #pragma cling add_library_path("ortools/lib")
