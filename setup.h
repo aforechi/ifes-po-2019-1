@@ -3,6 +3,7 @@
 
 #define USE_GLOP
 #define USE_CBC
+#define USE_SCIP
 
 #pragma cling add_include_path("ortools/include")
 #pragma cling add_library_path("ortools/lib")
@@ -20,5 +21,6 @@
 #pragma cling load("protobuf")
 #pragma cling load("glog")
 #pragma cling load("gflags")
+
 
 #endif
