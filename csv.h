@@ -91,4 +91,19 @@ auto csv_test_double() {
     std::for_each(csv.begin(),csv.end(),[&sum](const std::vector<double>& c){sum += c.at(2);});
     return sum;
 }
+
+template<typename T>
+void transpose(std::vector<std::vector<T>> &b) {
+    if (b.size() == 0)
+        return;
+
+    std::vector<std::vector<T>> a(b[0].size(), std::vector<T>());
+
+    for (int i = 0; i < b.size(); i++)
+        for (int j = 0; j < b[i].size(); j++)
+            a[j].push_back(b[i][j]);
+
+    b = a;
+}
+    
 #endif
