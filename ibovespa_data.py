@@ -14,10 +14,16 @@ symbols = ['ABEV3','AZUL4','B3SA3','BBAS3','BBDC3','BBDC4','BBSE3','BEEF3','BPAC
 def daily():
   for symbol in symbols:
     print(symbol)
-    f = web.DataReader(symbol+'.SA', 'yahoo', start=datetime(2010, 1, 1), end=datetime(2020, 8, 31), interval='m')
+    f = web.DataReader(symbol+'.SA', 'yahoo', start=datetime(2010, 1, 1), end=datetime(2020, 9, 30))
     f.to_csv('ibovespa/'+ symbol + '.csv', columns=['Adj Close'], index_label='Date')
 
 def monthly():
+  for symbol in symbols:
+    print(symbol)
+    f = web.get_data_yahoo(symbol+'.SA', start=datetime(2009, 12, 1), end=datetime(2020, 9, 30), interval='m').pct_change().dropna()
+    f.to_csv('ibovespa/'+ symbol + 'M.csv', columns=['Adj Close'], index_label='Date', date_format='%Y-%m')
+
+def convert2monthly():
   for symbol in symbols:
     print(symbol)
     f = pd.read_csv('ibovespa/'+ symbol + '.csv', index_col='Date', parse_dates=True).pct_change()
@@ -26,4 +32,5 @@ def monthly():
 
 if __name__ == '__main__':
   #daily()
-  monthly()
+  convert2monthly()
+  #monthly()
