@@ -4,3 +4,5 @@ work="$PWD"
 
 tar zxf ortools.tar.gz
 tar zxf scip.tar.gz
+
+rm prova-0*.ipynb
