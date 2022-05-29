@@ -3,8 +3,9 @@ channels:
   - QuantStack
   - conda-forge
 dependencies:
-  - octave_kernel
+  - roboticstoolbox-python
   - xeus-cling
   - notebook
+  - ipympl
   - pip:
     - ortools
