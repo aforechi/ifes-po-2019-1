@@ -1,5 +1,3 @@
-octave
-gnuplot
 wget 
 pkg-config 
 build-essential 
